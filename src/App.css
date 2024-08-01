@@ -1,0 +1,203 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Main App Styles */
+.App {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+h1 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+/* Button Styles */
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:focus {
+  outline: none;
+}
+
+button.danger {
+  background-color: red;
+}
+
+button.danger:hover {
+  background-color: darkred;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: left;
+  color: #555;
+}
+
+input, select, button[type="submit"] {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+}
+
+input:focus, select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button[type="button"] {
+  background-color: #28a745;
+}
+
+button[type="button"]:hover {
+  background-color: #218838;
+}
+
+/* Calendar Styles */
+.rbc-calendar {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.rbc-toolbar {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.rbc-toolbar button {
+  background: #0056b3;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rbc-toolbar button:hover {
+  background: #003f7f;
+}
+
+.rbc-event {
+  background-color: #007bff;
+  border-radius: 4px;
+  padding: 2px 4px;
+  color: white;
+  text-align: center;
+}
+
+.rbc-day-bg {
+  cursor: pointer;
+}
+
+.rbc-day-bg:hover {
+  background-color: #f0f2f5;
+}
+
+.rbc-today {
+  background-color: #e6f7ff;
+}
+
+.rbc-off-range-bg {
+  background-color: #f0f2f5;
+}
+
+/* Rental Details Styles */
+.rental-details {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rental-details h2 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.rental-details p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Stock Info Styles */
+.stock-info {
+  margin-bottom: 20px;
+}
+
+.stock-info p {
+  margin: 5px 0;
+  color: #007bff;
+  font-size: 1.2em;
+}
+
+/* Summary Styles */
+.summary {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.summary h2 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.summary p {
+  margin: 5px 0;
+  color: #555;
+}
