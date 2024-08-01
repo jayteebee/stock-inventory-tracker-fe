@@ -43,7 +43,7 @@ function BookingForm({ onBookingComplete }) {
 
     const checkAvailability = () => {
         const { startDate, endDate, numberOfCameras } = formData;
-        axios.post('http://localhost:5000/api/rentals/availability', { startDate, endDate })
+        axios.post('/api/rentals/availability', { startDate, endDate })
             .then(response => {
                 const availableCameras = response.data.availableCameras;
                 if (numberOfCameras > availableCameras) {
@@ -65,7 +65,7 @@ function BookingForm({ onBookingComplete }) {
         const { startDate, startTime, endDate, endTime, numberOfCameras } = formData;
         const startDateTime = `${startDate}T${startTime}`;
         const endDateTime = `${endDate}T${endTime}`;
-        axios.post('http://localhost:5000/api/rentals/availability', { startDate, endDate })
+        axios.post('/api/rentals/availability', { startDate, endDate })
             .then(response => {
                 const availableCameras = response.data.availableCameras;
                 if (numberOfCameras > availableCameras) {
@@ -76,7 +76,7 @@ function BookingForm({ onBookingComplete }) {
                     alert(message);
                 } else {
                     const newFormData = { ...formData, startDateTime, endDateTime };
-                    axios.post('http://localhost:5000/api/rentals', newFormData)
+                    axios.post('/api/rentals', newFormData)
                         .then(response => {
                             onBookingComplete();
                             alert('Rental booked successfully');

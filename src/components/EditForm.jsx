@@ -45,7 +45,7 @@ function EditForm({ rental, onEditComplete, onDelete }) {
         const startDateTime = `${startDate}T${startTime}`;
         const endDateTime = `${endDate}T${endTime}`;
         const newFormData = { ...formData, startDateTime, endDateTime };
-        axios.put(`http://localhost:5000/api/rentals/${rental._id}`, newFormData)
+        axios.put(`/api/rentals/${rental._id}`, newFormData)
             .then(response => {
                 onEditComplete(response.data);
                 alert('Rental updated successfully');
@@ -55,7 +55,7 @@ function EditForm({ rental, onEditComplete, onDelete }) {
     
 
     const handleDelete = () => {
-        axios.delete(`http://localhost:5000/api/rentals/${rental._id}`)
+        axios.delete(`/api/rentals/${rental._id}`)
             .then(() => {
                 onDelete(rental._id);
                 alert('Rental deleted successfully');

@@ -10,6 +10,12 @@ import EditForm from './components/EditForm';
 
 const localizer = momentLocalizer(moment);
 
+if (process.env.NODE_ENV === 'production') {
+    axios.defaults.baseURL = 'https://stock-backend-woad.vercel.app';
+  } else {
+    axios.defaults.baseURL = 'http://localhost:5000';
+  }
+
 function App() {
     const [events, setEvents] = useState([]);
     const [selectedRental, setSelectedRental] = useState(null);
@@ -23,7 +29,7 @@ function App() {
     }, []);
 
     const fetchRentals = () => {
-        axios.get('http://localhost:5000/api/rentals')
+        axios.get('/api/rentals')
             .then(response => {
                 const rentals = response.data.map(rental => ({
                     title: `${rental.numberOfCameras} Kits - ${rental.renter.companyName}`,
